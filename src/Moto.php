@@ -10,10 +10,9 @@ class Moto extends Veiculo
         string $marca,
         string $modelo,
         int $ano,
-        float $diaria,
         int $cilindradas
     ) {
-        parent::__construct($marca, $modelo, $ano, $diaria);
+        parent::__construct($marca, $modelo, $ano);
         $this->cilindradas = $cilindradas;
     }
 
@@ -22,8 +21,8 @@ class Moto extends Veiculo
         return $this->cilindradas;
     }
 
-    public function getCaracteristica(): string
+    public function calcularDiaria(): float
     {
-        return 'Cilindradas: ' . $this->cilindradas;
+        return 70.00;
     }
 }
