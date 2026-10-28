@@ -4,15 +4,16 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f1f5f3;
-  color: #24332d;
+  background: #121212; /* Fundo escuro */
+  color: #e0e0e0; /* Texto claro */
   line-height: 1.5;
 }
 .cabecalho {
   padding: 32px 20px;
   text-align: center;
-  color: #ffffff;
-  background: #176b55;
+  color: #d4af37; /* Texto dourado */
+  background: #1a1a1a; /* Fundo levemente mais claro que o body */
+  border-bottom: 2px solid #d4af37; /* Detalhe dourado */
 }
 .cabecalho h1 {
   margin: 0 0 8px;
@@ -20,6 +21,7 @@ body {
 }
 .cabecalho p {
   margin: 0;
+  color: #aaaaaa;
 }
 .conteudo {
   width: calc(100% - 32px);
@@ -34,21 +36,21 @@ body {
 .cartao {
   flex: 1 1 280px;
   padding: 24px;
-  background: #ffffff;
-  border: 1px solid #d4e2dc;
+  background: #1e1e1e; /* Fundo do cartão escuro */
+  border: 1px solid #333333; /* Borda escura sutil */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgb(20 60 45 / 8%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Sombra mais marcada e escura */
 }
 .cartao h2 {
   margin-top: 0;
-  color: #176b55;
+  color: #d4af37; /* Título dourado */
 }
 .tipo {
   display: inline-block;
   margin-bottom: 12px;
   padding: 4px 10px;
-  color: #15533f;
-  background: #d9f2e7;
+  color: #121212; /* Texto escuro */
+  background: #d4af37; /* Fundo dourado */
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: bold;
@@ -59,14 +61,15 @@ body {
 .preco {
   margin-top: 20px;
   padding-top: 16px;
-  border-top: 1px solid #d4e2dc;
+  border-top: 1px solid #333333;
   font-size: 1.2rem;
   font-weight: bold;
+  color: #d4af37; /* Preço em destaque dourado */
 }
 .rodape {
   padding: 20px;
   text-align: center;
-  color: #52665d;
+  color: #777777;
   font-size: 0.9rem;
 }
 @media (max-width: 800px) {
