@@ -2,8 +2,8 @@
 require_once __DIR__ . '/src/Carro.php';
 require_once __DIR__ . '/src/Moto.php';
 
-$carro = new Carro('Toyota', 'Corolla', 2022, 150.00, 4);
-$moto = new Moto('Honda', 'CB 300F', 2023, 70.00, 300);
+$carro = new Carro('Toyota', 'Corolla', 2022, 4);
+$moto = new Moto('Honda', 'CB 300F', 2023, 300);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -33,11 +33,11 @@ $moto = new Moto('Honda', 'CB 300F', 2023, 70.00, 300);
                 </p>
                 
                 <p class="detalhe">
-                    <?= htmlspecialchars($carro->getCaracteristica(), ENT_QUOTES, 'UTF-8') ?>
+                    Portas: <?= $carro->getQuantidadePortas() ?>
                 </p>
                 
                 <p class="preco">
-                    Diária: R$ <?= number_format($carro->getDiaria(), 2, ',', '.') ?>
+                    Diária: R$ <?= number_format($carro->calcularDiaria(), 2, ',', '.') ?>
                 </p>
             </article>
 
@@ -52,10 +52,10 @@ $moto = new Moto('Honda', 'CB 300F', 2023, 70.00, 300);
                 </p>
                 
                 <p class="detalhe">
-                    <?= htmlspecialchars($moto->getCaracteristica(), ENT_QUOTES, 'UTF-8') ?>
+                    Cilindradas: <?= $moto->getCilindradas() ?>
                 </p>
                 <p class="preco">
-                    Diária: R$ <?= number_format($moto->getDiaria(), 2, ',', '.') ?>
+                    Diária: R$ <?= number_format($moto->calcularDiaria(), 2, ',', '.') ?>
                 </p>
             </article>
         </section>
