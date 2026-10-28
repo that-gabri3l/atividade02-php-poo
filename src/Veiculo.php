@@ -5,14 +5,12 @@ abstract class Veiculo
     private string $marca;
     private string $modelo;
     private int $ano;
-    private float $diaria;
 
-    public function __construct(string $marca, string $modelo, int $ano, float $diaria)
+    public function __construct(string $marca, string $modelo, int $ano)
     {
         $this->marca = $marca;
         $this->modelo = $modelo;
         $this->ano = $ano;
-        $this->diaria = $diaria;
     }
 
     public function getMarca(): string
@@ -30,10 +28,5 @@ abstract class Veiculo
         return $this->ano;
     }
 
-    public function getDiaria(): float
-    {
-        return $this->diaria;
-    }
-
-    abstract public function getCaracteristica(): string;
+    abstract public function calcularDiaria(): float;
 }
